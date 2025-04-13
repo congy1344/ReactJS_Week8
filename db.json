@@ -1,0 +1,32 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "image": "/src/assets/images/italian-tomato.png",
+      "title": "Italian-style tomato salad",
+      "time": "15 minutes",
+      "category": "summer"
+    },
+    {
+      "id": 2,
+      "image": "/src/assets/images/spaghetti.png",
+      "title": "Spaghetti with vegetables and shrimp",
+      "time": "25 minutes",
+      "category": "summer"
+    },
+    {
+      "id": 3,
+      "image": "/src/assets/images/lotus-salad.png",
+      "title": "Lotus delight salad",
+      "time": "20 minutes",
+      "category": "summer"
+    },
+    {
+      "id": 4,
+      "image": "/src/assets/images/snack-cake.png",
+      "title": "Snack cakes",
+      "time": "21 minutes",
+      "category": "summer"
+    }
+  ]
+}

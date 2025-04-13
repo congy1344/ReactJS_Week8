@@ -1,34 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./RecipeSection.css";
 
-const recipes = [
-  {
-    id: 1,
-    image: "/src/assets/images/italian-tomato.png",
-    title: "Italian-style tomato salad",
-    time: "15 minutes",
-  },
-  {
-    id: 2,
-    image: "/src/assets/images/spaghetti.png",
-    title: "Spaghetti with vegetables and shrimp",
-    time: "25 minutes",
-  },
-  {
-    id: 3,
-    image: "/src/assets/images/lotus-salad.png",
-    title: "Lotus delight salad",
-    time: "20 minutes",
-  },
-  {
-    id: 4,
-    image: "/src/assets/images/snack-cake.png",
-    title: "Snack cakes",
-    time: "21 minutes",
-  },
-];
-
 const RecipeSection = () => {
+  const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      try {
+        const response = await axios.get("http://localhost:3001/recipes");
+        setRecipes(response.data);
+        setLoading(false);
+      } catch (err) {
+        setError("Failed to fetch recipes");
+        setLoading(false);
+      }
+    };
+
+    fetchRecipes();
+  }, []);
+
+  if (loading) return <div className="loading">Loading...</div>;
+  if (error) return <div className="error">{error}</div>;
+
   return (
     <section className="recipe-section">
       <div className="recipe-section-container">

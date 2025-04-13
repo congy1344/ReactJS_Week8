@@ -129,3 +129,15 @@
     padding: 0 1rem;
   }
 }
+
+.loading,
+.error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  color: #ff4d4d;
+}
