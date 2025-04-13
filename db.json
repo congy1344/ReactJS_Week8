@@ -28,5 +28,35 @@
       "time": "21 minutes",
       "category": "summer"
     }
+  ],
+  "videoRecipes": [
+    {
+      "id": 1,
+      "image": "/src/assets/images/italian-tomato.png",
+      "title": "Salad with cabbage and shrimp",
+      "time": "32 minutes",
+      "videoUrl": "https://example.com/video1"
+    },
+    {
+      "id": 2,
+      "image": "/src/assets/images/snack-cake.png",
+      "title": "Salad of cove beans, shrimp and potatoes",
+      "time": "20 minutes",
+      "videoUrl": "https://example.com/video2"
+    },
+    {
+      "id": 3,
+      "image": "/src/assets/images/spaghetti.png",
+      "title": "Sunny-side up fried eggs",
+      "time": "15 minutes",
+      "videoUrl": "https://example.com/video3"
+    },
+    {
+      "id": 4,
+      "image": "/src/assets/images/lotus-salad.png",
+      "title": "Lotus delight salad",
+      "time": "20 minutes",
+      "videoUrl": "https://example.com/video4"
+    }
   ]
 }
