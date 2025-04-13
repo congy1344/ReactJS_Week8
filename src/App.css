@@ -9,6 +9,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
   width: 100%;
   min-height: 100vh;
 }
@@ -22,6 +23,7 @@ body {
 #root {
   width: 100%;
   min-height: 100vh;
+  background-color: #fff;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
