@@ -36,14 +36,33 @@
   margin-bottom: 0.8rem;
 }
 
-.footer-section ul li a {
+.footer-section ul li a,
+.footer-section ul li .active {
   color: #a0aec0;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footer-section ul li a:hover {
+.footer-section ul li a:hover,
+.footer-section ul li .active {
   color: #ffffff;
+}
+
+.footer-section ul li .active {
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-section ul li .active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff69b4;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
 }
 
 .newsletter {
@@ -120,14 +139,33 @@
   gap: 1rem;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links .active {
   color: #a0aec0;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-links .active {
   color: #ffffff;
+}
+
+.footer-links .active {
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-links .active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff69b4;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
 }
 
 .divider {

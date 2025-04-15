@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Footer.css";
 import logo from "../assets/images/Logo.png";
 
@@ -22,13 +23,28 @@ const Footer = () => {
           <h3>Learn More</h3>
           <ul>
             <li>
-              <a href="#our-cooks">Our Cooks</a>
+              <NavLink
+                to="/our-cooks"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Our Cooks
+              </NavLink>
             </li>
             <li>
-              <a href="#features">See Our Features</a>
+              <NavLink
+                to="/features"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                See Our Features
+              </NavLink>
             </li>
             <li>
-              <a href="#faq">FAQ</a>
+              <NavLink
+                to="/faq"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                FAQ
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -37,10 +53,20 @@ const Footer = () => {
           <h3>Shop</h3>
           <ul>
             <li>
-              <a href="#subscription">Gift Subscription</a>
+              <NavLink
+                to="/subscription"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Gift Subscription
+              </NavLink>
             </li>
             <li>
-              <a href="#feedback">Send Us Feedback</a>
+              <NavLink
+                to="/feedback"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Send Us Feedback
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -49,25 +75,60 @@ const Footer = () => {
           <h3>Recipes</h3>
           <ul>
             <li>
-              <a href="#this-week">What to Cook This Week</a>
+              <NavLink
+                to="/recipes/this-week"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                What to Cook This Week
+              </NavLink>
             </li>
             <li>
-              <a href="#pasta">Pasta</a>
+              <NavLink
+                to="/recipes/pasta"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Pasta
+              </NavLink>
             </li>
             <li>
-              <a href="#dinner">Dinner</a>
+              <NavLink
+                to="/recipes/dinner"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Dinner
+              </NavLink>
             </li>
             <li>
-              <a href="#healthy">Healthy</a>
+              <NavLink
+                to="/recipes/healthy"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Healthy
+              </NavLink>
             </li>
             <li>
-              <a href="#vegetarian">Vegetarian</a>
+              <NavLink
+                to="/recipes/vegetarian"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Vegetarian
+              </NavLink>
             </li>
             <li>
-              <a href="#vegan">Vegan</a>
+              <NavLink
+                to="/recipes/vegan"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Vegan
+              </NavLink>
             </li>
             <li>
-              <a href="#christmas">Christmas</a>
+              <NavLink
+                to="/recipes/christmas"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Christmas
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -75,14 +136,26 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="footer-logo">
-          <img src={logo} alt="Chefify Logo" />
+          <NavLink to="/">
+            <img src={logo} alt="Chefify Logo" />
+          </NavLink>
         </div>
         <div className="footer-info">
           <span>2023 Chefify Company</span>
           <div className="footer-links">
-            <a href="#terms">Terms of Service</a>
+            <NavLink
+              to="/terms"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Terms of Service
+            </NavLink>
             <span className="divider">|</span>
-            <a href="#privacy">Privacy Policy</a>
+            <NavLink
+              to="/privacy"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Privacy Policy
+            </NavLink>
           </div>
         </div>
       </div>
