@@ -1,50 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./EditorsPick.css";
-// Import ảnh trực tiếp để webpack có thể xử lý
-import lotusDelightSalad from "../assets/images/corn_salad.png";
-import cornSalad from "../assets/images/corn_salad.png";
-import potatoSalad from "../assets/images/Potato Salad.png";
-import lotusDelight from "../assets/images/lotus_delight_salad.png";
 
 const EditorsPick = () => {
-  const editorsPicks = [
-    {
-      id: 1,
-      title: "Stuffed sticky rice ball",
-      time: "34 minutes",
-      author: "Jennifer King",
-      description:
-        "Stuffed sticky rice balls: A delightful Asian treat with chewy, glutinous rice and a flavorful surprise filling...",
-      image: lotusDelight,
-    },
-    {
-      id: 2,
-      title: "Strawberry smoothie",
-      time: "40 minutes",
-      author: "Matthew Martinez",
-      description:
-        "Savor the refreshing delight of a strawberry smoothie. Made with ripe strawberries, this creamy blend offers...",
-      image: cornSalad,
-    },
-    {
-      id: 3,
-      title: "Latte Art",
-      time: "15 minutes",
-      author: "Sarah Hill",
-      description:
-        "Latte art is the skillful craft of creating captivating designs on the surface of a latte...",
-      image: lotusDelightSalad,
-    },
-    {
-      id: 4,
-      title: "Butter fried noodles",
-      time: "16 minutes",
-      author: "Julia Lopez",
-      description:
-        "Butter fried noodles: Savory noodles cooked in butter for a delicious and satisfying meal...",
-      image: potatoSalad,
-    },
-  ];
+  const [editorsPicks, setEditorsPicks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchEditorsPicks = async () => {
+      try {
+        const response = await axios.get("http://localhost:3001/editorsPicks");
+        setEditorsPicks(response.data);
+        setLoading(false);
+      } catch {
+        setError("Không thể tải dữ liệu. Vui lòng thử lại sau.");
+        setLoading(false);
+      }
+    };
+
+    fetchEditorsPicks();
+  }, []);
+
+  if (loading) return <div className="ep-loading">Đang tải...</div>;
+  if (error) return <div className="ep-error">{error}</div>;
 
   return (
     <section className="ep-section">
@@ -81,9 +60,7 @@ const EditorsPick = () => {
                 </div>
                 <div className="ep-author">
                   <img
-                    src={`../../assets/images/avatars/${pick.author
-                      .toLowerCase()
-                      .replace(" ", "-")}.jpg`}
+                    src={pick.authorAvatar}
                     alt={pick.author}
                     className="ep-author-avatar"
                   />

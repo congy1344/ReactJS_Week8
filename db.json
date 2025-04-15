@@ -58,5 +58,43 @@
       "time": "20 minutes",
       "videoUrl": "https://example.com/video4"
     }
+  ],
+  "editorsPicks": [
+    {
+      "id": 1,
+      "title": "Stuffed sticky rice ball",
+      "time": "34 minutes",
+      "author": "Jennifer King",
+      "description": "Stuffed sticky rice balls: A delightful Asian treat with chewy, glutinous rice and a flavorful surprise filling...",
+      "image": "/src/assets/images/lotus_delight_salad.png",
+      "authorAvatar": "/src/assets/images/Avatar.png"
+    },
+    {
+      "id": 2,
+      "title": "Strawberry smoothie",
+      "time": "40 minutes",
+      "author": "Matthew Martinez",
+      "description": "Savor the refreshing delight of a strawberry smoothie. Made with ripe strawberries, this creamy blend offers...",
+      "image": "/src/assets/images/corn_salad.png",
+      "authorAvatar": "/src/assets/images/Avatar.png"
+    },
+    {
+      "id": 3,
+      "title": "Latte Art",
+      "time": "15 minutes",
+      "author": "Sarah Hill",
+      "description": "Latte art is the skillful craft of creating captivating designs on the surface of a latte...",
+      "image": "/src/assets/images/corn_salad.png",
+      "authorAvatar": "/src/assets/images/Avatar.png"
+    },
+    {
+      "id": 4,
+      "title": "Butter fried noodles",
+      "time": "16 minutes",
+      "author": "Julia Lopez",
+      "description": "Butter fried noodles: Savory noodles cooked in butter for a delicious and satisfying meal...",
+      "image": "/src/assets/images/Potato Salad.png",
+      "authorAvatar": "/src/assets/images/Avatar.png"
+    }
   ]
 }
